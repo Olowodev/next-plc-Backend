@@ -6,6 +6,11 @@ import {Response as fetchResponse, FetchError} from 'node-fetch'
 const app: Express = express();
 const port = 8000;
 
+app.get('/',async (req: Request, res: Response) => {
+    res.send('You have reached my next interview task API!!')
+    
+})
+
 app.get('/:searchTerm', async (req: Request, res: Response) => {
 
     const url = `https://itunes.apple.com/search?term=${req.params.searchTerm}`;
