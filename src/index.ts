@@ -4,7 +4,7 @@ import {Response as fetchResponse, FetchError} from 'node-fetch'
 
 
 const app: Express = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.get('/',async (req: Request, res: Response) => {
     res.send('You have reached my next interview task API!!')
