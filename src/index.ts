@@ -6,9 +6,9 @@ import {Response as fetchResponse, FetchError} from 'node-fetch'
 const app: Express = express();
 const port = 8000;
 
-app.get('/', async (req: Request, res: Response) => {
+app.get('/:searchTerm', async (req: Request, res: Response) => {
 
-    const url = `https://itunes.apple.com/search?term=${req.query.searchTerm}`;
+    const url = `https://itunes.apple.com/search?term=${req.params.searchTerm}`;
     const options = {
         "method": "GET"
     }
