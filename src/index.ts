@@ -20,7 +20,7 @@ app.get('/:searchTerm', async (req: Request, res: Response) => {
                 error: e
             })
         })
-    res.json(response.results)
+    res.json(response)
 
 })
 
